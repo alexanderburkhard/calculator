@@ -6,6 +6,7 @@ let nums = []
 
 let numCount = 0
 
+const buttonClear = document.querySelector('#clear');
 const buttonNums = document.querySelectorAll('.number');
 const buttonOps = document.querySelectorAll('.operands');
 const calcField = document.querySelector('#input-line');
@@ -53,11 +54,16 @@ function calculate(event){
     } else if(currentOps == '/') {
         results = +Number(calcField.textContent) / Number(resultsField.textContent);
     };
-    
+
     calcField.textContent = calcField.textContent +' '+currentOps +' '+ resultsField.textContent
     resultsField.textContent = results;
 };
 
-
+/// Clear Button
+buttonClear.addEventListener('click', clearAll);
+function clearAll(){
+    resultsField.textContent = '';
+    calcField.textContent = '0';
+};
 
 
