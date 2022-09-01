@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./calculator.js" defer></script>
+</head>
+<body>
+    <div id="header">
+        <div id="header-container">
+
+        </div>
+    </div>
+    <div id="main">
+        <div id="main-container">
+            <div id="calc-container">
+                <div class="result-container">
+                    <div id="input-line">0</div>
+                    <div id="results"></div>
+                </div>  
+                
+                <!-- Line 1 / 5-->
+                <div class="line">
+                    <div class="button other" value="AC">AC</div>
+                    <div class="button other" value="+-">+/-</div>
+                    <div class="button other" value="%">%</div>
+                    <div class="button operands" id="divide" value="/">/</div>
+                </div>  
+
+                <!-- Line 2 / 5-->
+                <div class="line">
+                    <div class="button number" value="7">7</div>
+                    <div class="button number" value="8">8</div>
+                    <div class="button number" value="9">9</div>
+                    <div class="button operands" id="multiply" value="x">x</div>
+                </div>
+
+                <!-- Line 3 / 5-->
+                <div class="line">
+                    <div class="button number" value="4">4</div>
+                    <div class="button number" value="5">5</div>
+                    <div class="button number" value="6">6</div>
+                    <div class="button operands" id="substract" value="-">-</div>
+                </div>
+
+                <!-- Line 4 / 5-->
+                <div class="line">
+                    <div class="button number" value="1">1</div>
+                    <div class="button number" value="2">2</div>
+                    <div class="button number" value="3">3</div>
+                    <div class="button operands" id="add" value="+">+</div>
+                </div>
+
+                <!-- Line 5 / 5-->
+                <div class="line">
+                    <div class="button other" value="darklight">Dark/Light</div>
+                    <div class="button number" value="0">0</div>
+                    <div class="button number" value=".">.</div>
+                    <div class="button" id="calculate" value="calculate">=</div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
