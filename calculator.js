@@ -30,9 +30,9 @@ buttonOps.forEach(item => {
 });
 
 function addOps(event){
-    calcField.textContent = resultsField.textContent
-    resultsField.textContent = ''
-    currentOps = ' + '
+    calcField.textContent = resultsField.textContent;
+    resultsField.textContent = '';
+    currentOps = event.target.getAttribute('value');
     ///+' '+event.target.getAttribute('value') 
     /// 
 };
@@ -41,13 +41,21 @@ function addOps(event){
 buttonCalc.addEventListener('click', calculate);
 
 function calculate(event){
-    let results = +Number(calcField.textContent) + Number(resultsField.textContent);
-    console.log(results)
-    calcField.textContent = calcField.textContent + currentOps + resultsField.textContent
-    resultsField.textContent = results;
     
-    ///+' '+event.target.getAttribute('value') 
-    /// 
+    let results = 0
+
+    if(currentOps == '+'){
+        results = +Number(calcField.textContent) + Number(resultsField.textContent);
+    } else if(currentOps == '-'){
+        results = +Number(calcField.textContent) - Number(resultsField.textContent);
+    } else if(currentOps == 'x') {
+        results = +Number(calcField.textContent) * Number(resultsField.textContent);
+    } else if(currentOps == '/') {
+        results = +Number(calcField.textContent) / Number(resultsField.textContent);
+    };
+    
+    calcField.textContent = calcField.textContent +' '+currentOps +' '+ resultsField.textContent
+    resultsField.textContent = results;
 };
 
 
